@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Deep Midnight Navy Background with gold border -->
+  <circle cx="256" cy="256" r="240" fill="#0F172A" stroke="#C7A54B" stroke-width="16" />
+  
+  <!-- Stylized Monogram A (ABAA) -->
+  <g fill="#C7A54B" stroke="#C7A54B" stroke-width="2" stroke-linejoin="round">
+    <!-- Left Stem (Thick) -->
+    <path d="M 235,130 L 265,130 L 165,370 L 130,370 Z" />
+    
+    <!-- Right Stem (Thin) -->
+    <path d="M 260,130 L 278,130 L 375,370 L 350,370 Z" />
+    
+    <!-- Base Serifs (Left) -->
+    <path d="M 115,370 L 180,370 L 180,382 L 115,382 Z" />
+    
+    <!-- Base Serifs (Right) -->
+    <path d="M 335,370 L 390,370 L 390,382 L 335,382 Z" />
+    
+    <!-- Crossbar (Thin serif style) -->
+    <path d="M 172,280 L 338,280" stroke="#C7A54B" stroke-width="14" stroke-linecap="round" />
+    
+    <!-- Core Accent: Diamond inside the crossbar in Ivory -->
+    <path d="M 256,264 L 272,280 L 256,296 L 240,280 Z" fill="#F8F6F1" stroke="#F8F6F1" stroke-width="1" />
+  </g>
+</svg>
