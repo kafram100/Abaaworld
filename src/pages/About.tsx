@@ -50,17 +50,17 @@ export default function About() {
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-7">
             <p className="section-label mb-6">About ABAA</p>
-            <h1 className="font-serif text-5xl md:text-7xl text-ivory leading-[1.02] mb-8">Meet ABAA.</h1>
+            <h1 className="font-serif text-5xl md:text-7xl text-ivory leading-[1.02] mb-8 text-balance">Meet ABAA.</h1>
             <div className="gold-rule-long mb-8" />
-            <p className="font-serif text-xl md:text-2xl italic text-ivory/85 leading-snug max-w-2xl mb-6">
-              Building systems that move industries, communities, and human potential forward.
+            <p className="font-serif text-xl md:text-2xl italic text-ivory/90 leading-snug max-w-2xl mb-6 text-balance">
+              From clinical environments to scalable enterprise: A lifelong practice of stewardship.
             </p>
-            <p className="font-sans text-base font-light text-ivory/65 leading-relaxed max-w-2xl mb-10">
+            <p className="font-sans text-base font-light text-ivory/80 leading-relaxed max-w-2xl mb-10">
               Arafat Bukola Adam Abdullahi Al Ilory (ABAA) is a founder, systems strategist, healthcare professional, author, enterprise builder, and faith-inspired global voice building scalable ecosystems across logistics, healthcare, education, ethical technology, governance, and human development.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/portfolio" className="bg-gold text-navy px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-all duration-300 rounded-full">Explore Founder Portfolio</Link>
-              <Link to="/reflections" className="border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full">Read Reflections</Link>
+              <Link to="/portfolio" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Explore Founder Portfolio</Link>
+              <Link to="/reflections" className="border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Read Reflections</Link>
             </div>
           </div>
           <div className="lg:col-span-5 aspect-[4/5] overflow-hidden">

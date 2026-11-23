@@ -11,32 +11,32 @@ export default function FinalConversionSection() {
 
       <div className="relative container mx-auto px-6 max-w-4xl text-center">
         <p className="section-label mb-6">Begin the Conversation</p>
-        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-ivory leading-[1.02] mb-10">
+        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-ivory leading-[1.02] mb-10 text-balance">
           Systems. Stewardship. Human Flourishing.
         </h2>
         <div className="gold-rule-long mx-auto mb-10" />
-        <p className="font-serif text-xl md:text-2xl italic text-ivory/80 leading-snug max-w-3xl mx-auto mb-14">
+        <p className="font-serif text-xl md:text-2xl italic text-ivory/90 leading-snug max-w-3xl mx-auto mb-14">
           Whether through speaking, partnerships, enterprise collaboration, books, or thought leadership, ABAA is committed to building systems that create meaningful and sustainable impact.
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap items-center gap-4 justify-center">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 bg-gold text-navy px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-all duration-300 rounded-full"
+            className="inline-flex items-center gap-2 bg-gold text-navy px-9 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           >
             Work With ABAA
           </Link>
           <Link
             to="/portfolio"
-            className="inline-flex items-center gap-2 border border-ivory/40 text-ivory px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
+            className="inline-flex items-center gap-2 border border-ivory/60 text-ivory px-9 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
           >
             Explore Founder Portfolio
           </Link>
           <Link
             to="/reflections"
-            className="inline-flex items-center gap-2 text-gold border-b border-gold/40 pb-1 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold transition-all duration-300"
+            className="inline-flex items-center gap-1.5 text-gold border-b border-gold/60 pb-1 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold-light transition-all duration-300 ml-1"
           >
-            Read ABAA.World
+            Read Reflections →
           </Link>
         </div>
       </div>

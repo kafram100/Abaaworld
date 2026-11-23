@@ -44,53 +44,53 @@ export default function HeroSection() {
             ABAA · Arafat Bukola Adam Abdullahi Al Ilory
           </p>
 
-          <h1 className="display-serif text-[2.75rem] sm:text-[4rem] md:text-[5.25rem] lg:text-[6.25rem] text-ivory animate-fade-in-delay-1 mb-8">
+          <h1 className="display-serif text-[2.75rem] sm:text-[4rem] md:text-[5.25rem] lg:text-[6.25rem] text-ivory animate-fade-in-delay-1 mb-8 text-balance">
             Building Systems That Move Industries, Communities & Human Potential Forward.
           </h1>
 
           <div className="flex items-center gap-3 mb-8 animate-fade-in-delay-2">
             <div className="gold-rule-long" />
-            <p className="font-sans text-[0.7rem] tracking-[0.05em] uppercase text-ivory/70">
+            <p className="font-sans text-[0.7rem] tracking-[0.05em] uppercase text-ivory/85">
               Founder · Systems Architect · Enterprise Builder · Author · Faith-Inspired Voice
             </p>
           </div>
 
-          <p className="font-serif text-xl md:text-2xl italic text-ivory/85 leading-snug max-w-2xl animate-fade-in-delay-2 mb-5">
+          <p className="font-serif text-xl md:text-2xl italic text-ivory/90 leading-snug max-w-2xl animate-fade-in-delay-2 mb-5">
             Founder of scalable systems across healthcare, logistics, education, enterprise infrastructure, ethical technology, and human flourishing.
           </p>
 
-          <p className="font-sans text-sm md:text-base font-light text-ivory/60 leading-relaxed max-w-xl animate-fade-in-delay-3 mb-12">
+          <p className="font-sans text-sm md:text-base font-light text-ivory/80 leading-relaxed max-w-xl animate-fade-in-delay-3 mb-12">
             Building ecosystems that transform ideas into practical, measurable, and sustainable outcomes.
           </p>
 
-          <div className="flex flex-wrap gap-4 animate-fade-in-delay-3 mb-14">
+          <div className="flex flex-wrap items-center gap-4 animate-fade-in-delay-3 mb-14">
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-all duration-300 rounded-full"
+              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
-              Explore My Work
+              Explore Founder Portfolio
             </Link>
             <Link
               to="/ventures"
-              className="inline-flex items-center gap-2 border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
+              className="inline-flex items-center gap-2 border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               View Ventures
             </Link>
             <Link
               to="/reflections"
-              className="inline-flex items-center gap-2 text-gold border-b border-gold/40 pb-1 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold transition-all duration-300"
+              className="inline-flex items-center gap-1.5 text-gold border-b border-gold/60 pb-1 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold-light transition-all duration-300 ml-1"
             >
-              Read Reflections
+              Read Reflections →
             </Link>
           </div>
 
           {/* Trust micro line */}
           <div className="animate-fade-in-delay-3 max-w-2xl">
-            <p className="section-label text-ivory/40 mb-3">Trusted Through Experience In</p>
+            <p className="section-label text-ivory/60 mb-3">Trusted Through Experience In</p>
             <div className="flex flex-wrap gap-x-5 gap-y-2 items-center">
               {trustDomains.map((d, i) => (
                 <span key={d} className="flex items-center gap-5">
-                  <span className="font-sans text-xs tracking-[0.16em] uppercase text-ivory/55">{d}</span>
+                  <span className="font-sans text-xs tracking-[0.16em] uppercase text-ivory/75">{d}</span>
                   {i < trustDomains.length - 1 && <span className="text-gold/40">·</span>}
                 </span>
               ))}

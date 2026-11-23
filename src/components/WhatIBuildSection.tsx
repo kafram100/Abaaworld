@@ -65,19 +65,13 @@ export default function WhatIBuildSection() {
               </p>
             </div>
           ))}
-          {/* Filler block for symmetry */}
-          <div className="hidden lg:flex bg-navy p-10 flex-col justify-between">
-            <p className="section-label text-gold">Founder Philosophy</p>
-            <p className="font-serif text-2xl italic text-ivory/90 leading-snug">
+          {/* Philosophy feature block spanning 2 columns on desktop to balance the 3-column grid */}
+          <div className="bg-navy p-10 flex flex-col justify-between lg:col-span-2">
+            <p className="section-label text-gold mb-4">Founder Philosophy</p>
+            <p className="font-serif text-2xl md:text-3xl italic text-ivory/95 leading-snug my-4 max-w-xl">
               "Sustainable transformation requires systems, stewardship, and service."
             </p>
-            <p className="font-sans text-[0.7rem] tracking-[0.05em] uppercase text-ivory/40">— ABAA</p>
-          </div>
-          <div className="hidden md:block lg:hidden bg-navy p-10">
-            <p className="section-label text-gold mb-6">Founder Philosophy</p>
-            <p className="font-serif text-2xl italic text-ivory/90 leading-snug">
-              "Sustainable transformation requires systems, stewardship, and service."
-            </p>
+            <p className="font-sans text-xs tracking-[0.08em] uppercase text-ivory/60">— ABAA · Systems Architect</p>
           </div>
         </div>
       </div>

@@ -158,14 +158,14 @@ export default function Contact() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <button type="submit" disabled={loading}
-                    className="flex-1 bg-navy text-ivory py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-all duration-300 rounded-full disabled:opacity-60 disabled:cursor-not-allowed">
-                    {loading ? "Sending…" : "Connect With ABAA"}
+                    className="flex-1 bg-navy text-ivory py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy hover:shadow-md transition-all duration-300 rounded-full disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+                    {loading ? "Sending…" : "Submit Inquiry"}
                   </button>
                   <a
                     href={getWebmailUrl()}
-                    className="inline-flex items-center justify-center gap-2 border border-navy/20 text-navy py-4 px-6 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full text-center"
+                    className="inline-flex items-center justify-center gap-2 border border-navy/30 text-navy py-4 px-6 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   >
-                    <Mail size={14} /> Send via Webmail
+                    <Mail size={15} /> Send via Webmail
                   </a>
                 </div>
               </form>
