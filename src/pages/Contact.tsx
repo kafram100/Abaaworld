@@ -3,6 +3,7 @@ import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { Mail } from "lucide-react";
 
 const inquiryTypes = [
   "Speaking",
@@ -20,6 +21,21 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", type: "Speaking", organization: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const getWebmailUrl = () => {
+    const subject = encodeURIComponent(`[ABAA Contact - ${form.type}] Inquiry from ${form.name || "Website Visitor"}`);
+    const bodyLines = [
+      `Name: ${form.name || "N/A"}`,
+      `Email: ${form.email || "N/A"}`,
+      `Organization: ${form.organization || "N/A"}`,
+      `Inquiry Type: ${form.type}`,
+      "",
+      "Message:",
+      form.message || ""
+    ];
+    const body = encodeURIComponent(bodyLines.join("\n"));
+    return `mailto:Arafat@abaaworld.com?cc=harafat750@gmail.com&subject=${subject}&body=${body}`;
+  };
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -90,8 +106,12 @@ export default function Contact() {
             </ul>
             <div className="border-t border-stone pt-6">
               <p className="section-label mb-2">Direct</p>
-              <p className="font-sans text-sm text-charcoal/75">hello@abaa.world</p>
-              <p className="font-sans text-sm text-charcoal/75 mt-1">press@abaa.world</p>
+              <a href="mailto:Arafat@abaaworld.com" className="font-sans text-sm text-charcoal/85 hover:text-gold transition-colors font-medium block">
+                ✉️ Arafat@abaaworld.com
+              </a>
+              <p className="font-sans text-xs text-charcoal/60 mt-1">
+                Forwarded to: <span className="font-mono text-[11px] text-charcoal/75">harafat750@gmail.com</span>
+              </p>
             </div>
           </aside>
 
@@ -136,10 +156,18 @@ export default function Contact() {
                     placeholder="Share the context, timing, and what you hope to build together." />
                 </div>
 
-                <button type="submit" disabled={loading}
-                  className="w-full bg-navy text-ivory py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-all duration-300 rounded-full disabled:opacity-60 disabled:cursor-not-allowed">
-                  {loading ? "Sending…" : "Connect With ABAA"}
-                </button>
+                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                  <button type="submit" disabled={loading}
+                    className="flex-1 bg-navy text-ivory py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-all duration-300 rounded-full disabled:opacity-60 disabled:cursor-not-allowed">
+                    {loading ? "Sending…" : "Connect With ABAA"}
+                  </button>
+                  <a
+                    href={getWebmailUrl()}
+                    className="inline-flex items-center justify-center gap-2 border border-navy/20 text-navy py-4 px-6 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full text-center"
+                  >
+                    <Mail size={14} /> Send via Webmail
+                  </a>
+                </div>
               </form>
             ) : (
               <div className="flex items-center justify-center min-h-[420px] text-center">

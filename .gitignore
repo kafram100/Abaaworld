@@ -24,3 +24,9 @@ dist-ssr
 *.sln
 *.sw?
 .workspace/
+
+# Database exports and backups
+*.sql
+!server/migrations/*.sql
+abaa_db_backup.sql
+

@@ -9,6 +9,9 @@ import { setupErrorHandler } from './middleware/errorHandler.js';
 const app = express();
 const port = parseInt(process.env.PORT || '5000');
 
+// Trust reverse proxy (e.g. Cloudflare, Nginx, Render, Heroku) for accurate IP rate limiting
+app.set('trust proxy', 1);
+
 const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:8080';
 if (!process.env.CORS_ORIGIN && process.env.NODE_ENV === 'production') {
   console.warn('⚠️  CORS_ORIGIN is not set. All browser requests will be blocked in production!');

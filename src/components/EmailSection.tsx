@@ -34,12 +34,12 @@ export default function EmailSection() {
       } else {
         // Graceful fallback — redirect to contact page if endpoint not yet live
         setStatus("error");
-        setErrorMsg("Could not subscribe right now. Please write to hello@abaa.world.");
+        setErrorMsg("Could not subscribe right now. Please write to Arafat@abaaworld.com.");
       }
     } catch {
       // Network error or endpoint not yet live — offer contact link as fallback
       setStatus("error");
-      setErrorMsg("Could not connect. Please write to hello@abaa.world.");
+      setErrorMsg("Could not connect. Please write to Arafat@abaaworld.com.");
     }
   };
 
@@ -98,8 +98,8 @@ export default function EmailSection() {
 
         <p className="font-serif text-sm italic text-ivory/40 mt-6 max-w-md mx-auto">
           No spam. Unsubscribe any time. Or write directly to{" "}
-          <a href="mailto:hello@abaa.world" className="text-gold/70 hover:text-gold transition-colors">
-            hello@abaa.world
+          <a href="mailto:Arafat@abaaworld.com" className="text-gold/70 hover:text-gold transition-colors">
+            Arafat@abaaworld.com
           </a>.
         </p>
       </div>

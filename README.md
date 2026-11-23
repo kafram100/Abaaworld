@@ -1,10 +1,10 @@
-# Welcome to your Lovable project
+# ABAA World (Abaaworld)
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+**URL**: https://abaa.world
 
-## How can I edit this code?
+## Development & Setup
 
 There are several ways of editing your application.
 

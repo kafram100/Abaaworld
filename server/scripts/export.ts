@@ -11,7 +11,7 @@ const config = {
   database: process.env.DB_NAME || 'abaa_db',
 };
 
-function escapeValue(val: any): string {
+function escapeValue(val: unknown): string {
   if (val === null || val === undefined) {
     return 'NULL';
   }
@@ -36,6 +36,7 @@ function escapeValue(val: any): string {
     .replace(/\0/g, '\\0')
     .replace(/\n/g, '\\n')
     .replace(/\r/g, '\\r')
+    /* eslint-disable-next-line no-control-regex */
     .replace(/\x1a/g, '\\Z');
   return `'${escaped}'`;
 }
@@ -64,7 +65,7 @@ async function exportDatabase() {
 
     // Get all tables in the database
     const [tablesResult] = await connection.query('SHOW TABLES');
-    const tables = (tablesResult as any[]).map(row => Object.values(row)[0] as string);
+    const tables = (tablesResult as Record<string, unknown>[]).map(row => Object.values(row)[0] as string);
 
     if (tables.length === 0) {
       console.log('⚠️  No tables found in the database.');
@@ -79,12 +80,12 @@ async function exportDatabase() {
 
       // Get SHOW CREATE TABLE definition
       const [createTableResult] = await connection.query(`SHOW CREATE TABLE \`${table}\``);
-      const createTableSql = (createTableResult as any[])[0]['Create Table'] as string;
+      const createTableSql = (createTableResult as Record<string, string>[])[0]['Create Table'];
       sqlDump += `${createTableSql};\n\n`;
 
       // Get Table Rows
       const [rowsResult] = await connection.query(`SELECT * FROM \`${table}\``);
-      const rows = rowsResult as any[];
+      const rows = rowsResult as Record<string, unknown>[];
 
       if (rows.length > 0) {
         sqlDump += `-- Dumping data for table \`${table}\`\n`;

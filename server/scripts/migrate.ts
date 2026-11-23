@@ -45,7 +45,7 @@ async function runMigrations(): Promise<void> {
         try {
           await connection.execute(statement);
         } catch (err: unknown) {
-          if (err instanceof Error && (err as any).code === 'ER_UNSUPPORTED_PS') {
+          if (err instanceof Error && 'code' in err && (err as { code: unknown }).code === 'ER_UNSUPPORTED_PS') {
             await connection.query(statement);
           } else {
             throw err;

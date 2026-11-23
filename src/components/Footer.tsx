@@ -33,10 +33,10 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-5">
               {[
-                { icon: Instagram, href: "https://www.instagram.com/aoftace?igsh=N291cng3bzJodTVm", label: "Instagram", external: true },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/arafatbadamabdullahi?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn", external: true },
-                { icon: Youtube, href: "https://www.youtube.com/@Abaa-World", label: "YouTube", external: true },
-                { icon: Mail, href: "/contact", label: "Email", external: false },
+                { icon: Instagram, href: "https://www.instagram.com/arafat_adam_al_ilory?fqnt=c2l5M2tocHd2bWZl", label: "Instagram", external: true },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/arafatadamabdullahi?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn", external: true },
+                { icon: Youtube, href: "https://www.youtube.com/@MeetAbaa", label: "YouTube", external: true },
+                { icon: Mail, href: "mailto:Arafat@abaaworld.com", label: "Email", external: true },
               ].map(({ icon: Icon, href, label, external }) => (
                 <a
                   key={label}
@@ -84,7 +84,7 @@ export default function Footer() {
       <div className="border-t border-ivory/10">
         <div className="container mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-sans text-xs text-ivory/30">
-            © {new Date().getFullYear()} ABAA · Arafat Bukola Adam Abdullahi Al Ilory · abaa.world
+            ©️ 2026 - 2027 ABAA · Arafat Bukola Adam Abdullahi Al Ilory · abaa.world
           </p>
           <div className="flex gap-6">
             <Link to="/privacy" className="font-sans text-xs text-ivory/30 hover:text-ivory/60 transition-colors">Privacy</Link>
