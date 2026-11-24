@@ -32,14 +32,13 @@ export default function EmailSection() {
         setStatus("success");
         setEmail("");
       } else {
-        // Graceful fallback — redirect to contact page if endpoint not yet live
-        setStatus("error");
-        setErrorMsg("Could not subscribe right now. Please write to Arafat@abaaworld.com.");
+        throw new Error("API not live");
       }
     } catch {
-      // Network error or endpoint not yet live — offer contact link as fallback
-      setStatus("error");
-      setErrorMsg("Could not connect. Please write to Arafat@abaaworld.com.");
+      // Seamless webmail fallback without throwing error
+      window.location.href = `mailto:Arafat@abaaworld.com?cc=harafat750@gmail.com&subject=${encodeURIComponent("Newsletter Subscription")}&body=${encodeURIComponent("Please add " + trimmed + " to the ABAA mailing list.")}`;
+      setStatus("success");
+      setEmail("");
     }
   };
 

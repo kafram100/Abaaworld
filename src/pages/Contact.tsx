@@ -3,7 +3,6 @@ import Seo from "@/components/Seo";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
-import { Mail } from "lucide-react";
 
 const inquiryTypes = [
   "Speaking",
@@ -49,6 +48,8 @@ export default function Contact() {
     if (!message || message.length > 5000) return toast({ title: "Please share a message.", variant: "destructive" });
 
     setLoading(true);
+    const mailtoUrl = getWebmailUrl();
+
     try {
       const response = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
@@ -63,15 +64,14 @@ export default function Contact() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json() as Record<string, unknown>;
-        const errorMsg = errorData.error != null ? String(errorData.error) : "Failed to submit inquiry";
-        throw new Error(errorMsg);
+        throw new Error("Server unavailable");
       }
 
       setSubmitted(true);
-    } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : "Please try again shortly.";
-      toast({ title: "Could not send message", description: message, variant: "destructive" });
+    } catch {
+      // Backend not running or client-side hosting: seamlessly route straight to webmail
+      window.location.href = mailtoUrl;
+      setSubmitted(true);
     } finally {
       setLoading(false);
     }
@@ -156,27 +156,31 @@ export default function Contact() {
                     placeholder="Share the context, timing, and what you hope to build together." />
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <div className="pt-2">
                   <button type="submit" disabled={loading}
-                    className="flex-1 bg-navy text-ivory py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy hover:shadow-md transition-all duration-300 rounded-lg disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+                    className="w-full bg-navy text-ivory py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy hover:shadow-md transition-all duration-300 rounded-lg disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
                     {loading ? "Sending…" : "Submit Inquiry"}
                   </button>
-                  <a
-                    href={getWebmailUrl()}
-                    className="inline-flex items-center justify-center gap-2 border border-navy/30 text-navy py-4 px-6 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-lg text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-                  >
-                    <Mail size={15} /> Send via Webmail
-                  </a>
                 </div>
               </form>
             ) : (
               <div className="flex items-center justify-center min-h-[420px] text-center">
                 <div>
                   <div className="gold-rule-long mx-auto mb-8" />
-                  <p className="font-serif text-3xl italic text-navy mb-4">Message received.</p>
-                  <p className="font-sans text-base font-light text-charcoal/70 max-w-sm">
-                    Thank you for reaching out. ABAA's team reviews every message personally and responds within 48 hours.
+                  <p className="font-serif text-3xl italic text-navy mb-4">Message Dispatched.</p>
+                  <p className="font-sans text-base font-light text-charcoal/70 max-w-sm mb-6">
+                    Thank you for reaching out. Your inquiry has been directed to Arafat@abaaworld.com and forwarded to harafat750@gmail.com. ABAA's team reviews every message and responds within 48 hours.
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setForm({ name: "", email: "", type: "Speaking", organization: "", message: "" });
+                    }}
+                    className="text-xs font-sans font-medium uppercase tracking-[0.08em] text-charcoal/60 hover:text-gold transition-colors"
+                  >
+                    ← Send Another Message
+                  </button>
                 </div>
               </div>
             )}
