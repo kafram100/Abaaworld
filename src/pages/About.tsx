@@ -59,8 +59,8 @@ export default function About() {
               Arafat Bukola Adam Abdullahi Al Ilory (ABAA) is a founder, systems strategist, healthcare professional, author, enterprise builder, and faith-inspired global voice building scalable ecosystems across logistics, healthcare, education, ethical technology, governance, and human development.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/portfolio" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Explore Founder Portfolio</Link>
-              <Link to="/reflections" className="border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Read Reflections</Link>
+              <Link to="/portfolio" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Explore Founder Portfolio</Link>
+              <Link to="/reflections" className="border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">Read Reflections</Link>
             </div>
           </div>
           <div className="lg:col-span-5 aspect-[4/5] overflow-hidden">
@@ -185,9 +185,9 @@ export default function About() {
           </h2>
           <div className="gold-rule-long mx-auto mb-10" />
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/contact" className="bg-gold text-navy px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-colors rounded-full">Partner With ABAA</Link>
-            <Link to="/reflections" className="border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-colors rounded-full">Read Reflections</Link>
-            <Link to="/portfolio" className="text-gold border-b border-gold/40 pb-1 px-2 py-3 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase">Founder Portfolio</Link>
+            <Link to="/contact" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory transition-colors rounded-lg">Partner With ABAA</Link>
+            <Link to="/reflections" className="border border-ivory/40 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-colors rounded-lg">Read Reflections</Link>
+            <Link to="/portfolio" className="text-gold border-b border-gold/40 pb-1 px-2 py-3 text-xs font-sans font-medium tracking-[0.08em] uppercase">Founder Portfolio</Link>
           </div>
         </div>
       </section>

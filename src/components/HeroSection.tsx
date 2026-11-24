@@ -66,13 +66,13 @@ export default function HeroSection() {
           <div className="flex flex-wrap items-center gap-4 animate-fade-in-delay-3 mb-14">
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory hover:shadow-lg transition-all duration-300 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               Explore Founder Portfolio
             </Link>
             <Link
               to="/ventures"
-              className="inline-flex items-center gap-2 border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              className="inline-flex items-center gap-2 border border-ivory/60 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold hover:bg-ivory/5 transition-all duration-300 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             >
               View Ventures
             </Link>

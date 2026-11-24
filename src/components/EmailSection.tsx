@@ -75,12 +75,12 @@ export default function EmailSection() {
               onChange={(e) => { setEmail(e.target.value); setStatus("idle"); setErrorMsg(""); }}
               placeholder="your@email.com"
               required
-              className="flex-1 bg-ivory/10 border border-ivory/25 text-ivory placeholder:text-ivory/40 px-5 py-3.5 text-sm font-sans focus:outline-none focus:border-gold transition-colors"
+              className="flex-1 bg-ivory/10 border border-ivory/25 text-ivory placeholder:text-ivory/40 px-5 py-3.5 text-sm font-sans rounded-lg focus:outline-none focus:border-gold transition-colors"
             />
             <button
               type="submit"
               disabled={status === "loading"}
-              className="bg-gold text-navy px-7 py-3.5 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+              className="bg-gold text-navy px-7 py-3.5 text-xs font-sans font-semibold tracking-[0.08em] uppercase rounded-lg hover:bg-ivory hover:shadow-md transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
             >
               {status === "loading" ? "Joining…" : "Join the List"}
             </button>

@@ -54,10 +54,10 @@ export default function EntrepreneurByDNA() {
               You didn't choose entrepreneurship. It chose you. This is a home for those building with their whole identity, not just their ambition.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#tiers" className="inline-flex items-center gap-2 bg-gold text-charcoal px-8 py-4 text-xs font-sans font-medium tracking-widest uppercase hover:bg-gold-deep transition-colors duration-300 rounded-full">
+              <a href="#tiers" className="inline-flex items-center gap-2 bg-gold text-charcoal px-8 py-4 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-gold-deep transition-colors duration-300 rounded-lg">
                 Join the Movement
               </a>
-              <Link to="/reflections" className="inline-flex items-center gap-2 border border-ivory/30 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full">
+              <Link to="/reflections" className="inline-flex items-center gap-2 border border-ivory/30 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-widest uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-lg">
                 Read Founder Letters
               </Link>
             </div>

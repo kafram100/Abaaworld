@@ -77,7 +77,7 @@ export default function AbaaWorld() {
           </div>
 
           <div className="mt-20 text-center">
-            <Link to="/reflections" className="bg-navy text-ivory px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-full">
+            <Link to="/reflections" className="bg-navy text-ivory px-9 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-lg">
               Read Reflections
             </Link>
           </div>

@@ -43,7 +43,7 @@ export default function EntrepreneurSection() {
 
           <Link
             to="/entrepreneurbydna"
-            className="inline-flex items-center gap-3 bg-gold text-charcoal px-8 py-4 text-xs font-sans font-medium tracking-widest uppercase hover:bg-gold-deep transition-colors duration-300 self-start rounded-full"
+            className="inline-flex items-center gap-3 bg-gold text-charcoal px-8 py-4 text-xs font-sans font-semibold tracking-widest uppercase hover:bg-gold-deep transition-colors duration-300 self-start rounded-lg"
           >
             Join the Movement
           </Link>

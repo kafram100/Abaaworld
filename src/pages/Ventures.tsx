@@ -126,7 +126,7 @@ export default function Ventures() {
           </div>
 
           <div className="mt-20 text-center">
-            <Link to="/contact" className="bg-gold text-navy px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-colors rounded-full">
+            <Link to="/contact" className="bg-gold text-navy px-9 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory transition-colors rounded-lg">
               Collaborate With ABAA
             </Link>
           </div>

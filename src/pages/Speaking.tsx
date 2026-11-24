@@ -78,8 +78,8 @@ export default function Speaking() {
           </h2>
           <div className="gold-rule-long mx-auto mb-10" />
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/contact?type=speaking" className="bg-gold text-navy px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-colors rounded-full">Book ABAA to Speak</Link>
-            <Link to="/media" className="border border-ivory/40 text-ivory px-9 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-colors rounded-full">Media Kit</Link>
+            <Link to="/contact?type=speaking" className="bg-gold text-navy px-9 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory transition-colors rounded-lg">Book ABAA to Speak</Link>
+            <Link to="/media" className="border border-ivory/40 text-ivory px-9 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-colors rounded-lg">Media Kit</Link>
           </div>
         </div>
       </section>

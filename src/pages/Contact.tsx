@@ -115,20 +115,20 @@ export default function Contact() {
             </div>
           </aside>
 
-          <div className="lg:col-span-8 bg-ivory-warm p-8 md:p-12">
+          <div className="lg:col-span-8 bg-ivory-warm p-8 md:p-12 rounded-xl border border-stone/30">
             {!submitted ? (
               <form onSubmit={submit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="section-label block mb-2">Full Name</label>
                     <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="w-full bg-ivory border border-stone px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
+                      className="w-full bg-ivory border border-stone rounded-lg px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
                       placeholder="Your full name" />
                   </div>
                   <div>
                     <label className="section-label block mb-2">Email</label>
                     <input type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="w-full bg-ivory border border-stone px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
+                      className="w-full bg-ivory border border-stone rounded-lg px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
                       placeholder="your@email.com" />
                   </div>
                 </div>
@@ -137,13 +137,13 @@ export default function Contact() {
                   <div>
                     <label className="section-label block mb-2">Organization</label>
                     <input value={form.organization} onChange={(e) => setForm({ ...form, organization: e.target.value })}
-                      className="w-full bg-ivory border border-stone px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
+                      className="w-full bg-ivory border border-stone rounded-lg px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors"
                       placeholder="Company, institution, or organization" />
                   </div>
                   <div>
                     <label className="section-label block mb-2">Inquiry Type</label>
                     <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value })}
-                      className="w-full bg-ivory border border-stone px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors">
+                      className="w-full bg-ivory border border-stone rounded-lg px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors">
                       {inquiryTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                     </select>
                   </div>
@@ -152,18 +152,18 @@ export default function Contact() {
                 <div>
                   <label className="section-label block mb-2">Message</label>
                   <textarea required rows={7} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full bg-ivory border border-stone px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors resize-none"
+                    className="w-full bg-ivory border border-stone rounded-lg px-4 py-3.5 text-sm font-sans text-charcoal focus:outline-none focus:border-gold transition-colors resize-none"
                     placeholder="Share the context, timing, and what you hope to build together." />
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <button type="submit" disabled={loading}
-                    className="flex-1 bg-navy text-ivory py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy hover:shadow-md transition-all duration-300 rounded-full disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+                    className="flex-1 bg-navy text-ivory py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy hover:shadow-md transition-all duration-300 rounded-lg disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
                     {loading ? "Sending…" : "Submit Inquiry"}
                   </button>
                   <a
                     href={getWebmailUrl()}
-                    className="inline-flex items-center justify-center gap-2 border border-navy/30 text-navy py-4 px-6 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                    className="inline-flex items-center justify-center gap-2 border border-navy/30 text-navy py-4 px-6 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-lg text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   >
                     <Mail size={15} /> Send via Webmail
                   </a>

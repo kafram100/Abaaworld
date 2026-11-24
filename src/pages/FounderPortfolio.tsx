@@ -154,8 +154,8 @@ export default function FounderPortfolio() {
           </div>
 
           <div className="mt-20 flex flex-wrap gap-4 justify-center">
-            <Link to="/speaking" className="bg-gold text-navy px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-colors rounded-full">Invite ABAA to Speak</Link>
-            <Link to="/contact" className="border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-colors rounded-full">Partner With ABAA</Link>
+            <Link to="/speaking" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory transition-colors rounded-lg">Invite ABAA to Speak</Link>
+            <Link to="/contact" className="border border-ivory/40 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-colors rounded-lg">Partner With ABAA</Link>
           </div>
         </div>
       </section>

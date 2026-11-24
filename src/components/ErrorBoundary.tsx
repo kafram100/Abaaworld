@@ -39,7 +39,7 @@ export class ErrorBoundary extends React.Component<Props, State> {
                 this.setState({ hasError: false, error: null });
                 window.location.reload();
               }}
-              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-3 text-sm font-medium tracking-wide uppercase hover:bg-gold/90 transition-all duration-300 rounded-full"
+              className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-3 text-sm font-medium tracking-wide uppercase hover:bg-gold/90 transition-all duration-300 rounded-lg"
             >
               Refresh Page
             </button>

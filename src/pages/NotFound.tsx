@@ -28,19 +28,19 @@ const NotFound = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 bg-navy text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-full"
+              className="inline-flex items-center gap-2 bg-navy text-ivory px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-lg"
             >
               Return Home
             </Link>
             <Link
               to="/reflections"
-              className="inline-flex items-center gap-2 border border-stone text-charcoal px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold-deep transition-colors rounded-full"
+              className="inline-flex items-center gap-2 border border-stone text-charcoal px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold-deep transition-colors rounded-lg"
             >
               Read Reflections
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 text-gold-deep border-b border-gold/40 pb-1 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold transition-colors"
+              className="inline-flex items-center gap-2 text-gold-deep border-b border-gold/40 pb-1 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold transition-colors"
             >
               Contact ABAA
             </Link>

@@ -77,10 +77,10 @@ export default function BookDetail() {
           </div>
 
           <div className="mt-16 border-t border-stone pt-10 flex flex-wrap gap-4">
-            <Link to="/contact" className="bg-navy text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-full">
+            <Link to="/contact" className="bg-navy text-ivory px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-gold hover:text-navy transition-colors rounded-lg">
               Publishing & Rights Inquiries
             </Link>
-            <Link to="/books" className="border border-stone text-charcoal px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold-deep transition-colors rounded-full">
+            <Link to="/books" className="border border-stone text-charcoal px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold-deep transition-colors rounded-lg">
               View All Works
             </Link>
           </div>

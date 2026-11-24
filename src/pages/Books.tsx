@@ -75,8 +75,8 @@ export default function Books() {
             ))}
           </div>
           <div className="flex flex-wrap gap-4">
-            <Link to="/media" className="bg-gold text-navy px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:bg-ivory transition-colors rounded-full">Media Kit</Link>
-            <Link to="/speaking" className="border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-colors rounded-full">Invite ABAA to Speak</Link>
+            <Link to="/media" className="bg-gold text-navy px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:bg-ivory transition-colors rounded-lg">Media Kit</Link>
+            <Link to="/speaking" className="border border-ivory/40 text-ivory px-8 py-4 text-xs font-sans font-medium tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-colors rounded-lg">Invite ABAA to Speak</Link>
           </div>
         </div>
       </section>

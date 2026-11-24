@@ -74,7 +74,7 @@ export default function FounderJourneySection() {
 
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 mt-6 border border-ivory/40 text-ivory px-8 py-4 text-[0.7rem] font-sans font-medium tracking-[0.05em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-full"
+              className="inline-flex items-center gap-2 mt-6 border border-ivory/40 text-ivory px-8 py-4 text-xs font-sans font-semibold tracking-[0.08em] uppercase hover:border-gold hover:text-gold transition-all duration-300 rounded-lg"
             >
               Read the Full Story
             </Link>
