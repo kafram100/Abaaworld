@@ -71,11 +71,23 @@
       "url": "https://abaa.world/"
     }
     </script>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=abaa-world-2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=abaa-world-2" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=abaa-world-2" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=abaa-world-2" />
+    <link rel="shortcut icon" href="/favicon.ico?v=abaa-world-2" />
+    <script>
+      // Force instant browser tab favicon refresh, busting aggressive browser caches
+      (function() {
+        try {
+          var bust = "abaa-world-" + Date.now();
+          var icon = document.querySelector("link[rel='icon'][type='image/svg+xml']");
+          if (icon) {
+            icon.href = "/favicon.svg?v=" + bust;
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
 
   <body>
