@@ -20,7 +20,7 @@ export default function AbaaWorld() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"ABAA.World"} description={"ABAA.World — the editorial and ideas hub for systems thinking, stewardship, and human flourishing."} canonical="/abaa-world" />
+      <Seo title={"ABAA.World"} description={"ABAA.World - the editorial and ideas hub for systems thinking, stewardship, and human flourishing."} canonical="/abaa-world" />
 
       {/* Emotional hero */}
       <section className="relative min-h-[80vh] flex items-center bg-emerald text-ivory overflow-hidden">

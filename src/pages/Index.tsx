@@ -20,7 +20,7 @@ const Index = () => {
       <Navigation />
       <Seo
         title="Arafat Bukola Adam Abdullahi Al Ilory (ABAA) | Founder, Systems Architect & Author"
-        description="ABAA — Founder, systems architect, healthcare professional, author, and faith-inspired global voice building scalable ecosystems across healthcare, education, logistics, ethical technology, and human flourishing."
+        description="ABAA - Founder, systems architect, healthcare professional, author, and faith-inspired global voice building scalable ecosystems across healthcare, education, logistics, ethical technology, and human flourishing."
         canonical="/"
         type="profile"
       />

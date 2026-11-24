@@ -81,7 +81,7 @@ export default function EmailSection() {
             <div className="gold-rule-long mx-auto mb-6" />
             <p className="font-serif text-2xl italic text-ivory/90 mb-2">You're on the list.</p>
             <p className="font-sans text-sm text-ivory/55">
-              Watch your inbox — ABAA's letters arrive with intention, not noise.
+              Watch your inbox - ABAA's letters arrive with intention, not noise.
             </p>
           </div>
         ) : (

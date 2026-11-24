@@ -24,7 +24,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Rate limiting — contact form: max 10 submissions per 15 min per IP
+// Rate limiting - contact form: max 10 submissions per 15 min per IP
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 10,

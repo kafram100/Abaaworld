@@ -14,7 +14,7 @@ export default function Reflections() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"Reflections · ABAA"} description={"Reflections for meaningful living — faith, healing, discernment, gratitude, and human flourishing."} canonical="/reflections" />
+      <Seo title={"Reflections · ABAA"} description={"Reflections for meaningful living - faith, healing, discernment, gratitude, and human flourishing."} canonical="/reflections" />
 
       <section className="pt-40 pb-20 bg-navy text-ivory">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -72,7 +72,7 @@ export default function Reflections() {
         </div>
       </section>
 
-      {/* Grid — shows items beyond the 4 featured above, or all items when filtering returns ≤ 4 */}
+      {/* Grid - shows items beyond the 4 featured above, or all items when filtering returns ≤ 4 */}
       <section className="py-20 md:py-28 bg-ivory-warm">
         <div className="container mx-auto px-6">
           {filtered.length > 4 && (

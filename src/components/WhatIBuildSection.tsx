@@ -71,7 +71,7 @@ export default function WhatIBuildSection() {
             <p className="font-serif text-2xl md:text-3xl italic text-ivory/95 leading-snug my-4 max-w-xl">
               "Sustainable transformation requires systems, stewardship, and service."
             </p>
-            <p className="font-sans text-xs tracking-[0.08em] uppercase text-ivory/60">— ABAA · Systems Architect</p>
+            <p className="font-sans text-xs tracking-[0.08em] uppercase text-ivory/60">- ABAA · Systems Architect</p>
           </div>
         </div>
       </div>

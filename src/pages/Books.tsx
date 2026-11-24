@@ -52,8 +52,8 @@ export default function Books() {
           <div className="space-y-px bg-stone/40 border border-stone/40">
             {[
               { date: "2026, Q3", t: "First titles enter editorial release" },
-              { date: "2026–2027", t: "Reflection series + companion journals" },
-              { date: "2027–2028", t: "Long-form systems and human development writing" },
+              { date: "2026-2027", t: "Reflection series + companion journals" },
+              { date: "2027-2028", t: "Long-form systems and human development writing" },
             ].map((u) => (
               <div key={u.t} className="bg-ivory p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-2 md:gap-10">
                 <p className="font-serif text-2xl text-gold md:w-48">{u.date}</p>

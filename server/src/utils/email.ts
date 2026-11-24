@@ -44,7 +44,7 @@ export async function sendContactEmails(data: EmailPayload): Promise<void> {
   const transporter = createTransporter();
 
   if (!transporter) {
-    console.warn('⚠️  Email not configured — set SMTP_HOST, SMTP_USER, SMTP_PASS to enable notifications.');
+    console.warn('⚠️  Email not configured - set SMTP_HOST, SMTP_USER, SMTP_PASS to enable notifications.');
     return;
   }
 
@@ -53,7 +53,7 @@ export async function sendContactEmails(data: EmailPayload): Promise<void> {
 
   const safeName = escapeHtml(data.name);
   const safeEmail = escapeHtml(data.email);
-  const safeOrg = escapeHtml(data.organization || '—');
+  const safeOrg = escapeHtml(data.organization || '-');
   const safeType = escapeHtml(data.inquiry_type);
   const safeMessage = escapeHtml(data.message);
 
@@ -66,7 +66,7 @@ export async function sendContactEmails(data: EmailPayload): Promise<void> {
       <p style="font-size: 16px; font-style: italic; color: #555; line-height: 1.7;">
         Your message has been received. ABAA's team reviews every inquiry personally and responds within 48 hours.
       </p>
-      <p style="margin-top: 32px; font-size: 14px; color: #888;">— ABAA</p>
+      <p style="margin-top: 32px; font-size: 14px; color: #888;">- ABAA</p>
     </div>
   `;
 

@@ -75,7 +75,7 @@ export default function Footer() {
               <p className="font-serif text-lg italic text-ivory/55 leading-relaxed max-w-2xl">
                 "Sustainable transformation requires systems, stewardship, and service."
               </p>
-              <p className="section-label text-gold/60 mt-3">— ABAA</p>
+              <p className="section-label text-gold/60 mt-3">- ABAA</p>
             </div>
           </div>
         </div>

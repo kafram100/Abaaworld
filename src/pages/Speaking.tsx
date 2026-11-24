@@ -23,7 +23,7 @@ export default function Speaking() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"Speaking · ABAA"} description={"ABAA on stage — keynotes, panels, and conversations on systems, leadership, and stewardship."} canonical="/speaking" />
+      <Seo title={"Speaking · ABAA"} description={"ABAA on stage - keynotes, panels, and conversations on systems, leadership, and stewardship."} canonical="/speaking" />
 
       <section className="pt-40 pb-24 bg-navy text-ivory">
         <div className="container mx-auto px-6 max-w-4xl">

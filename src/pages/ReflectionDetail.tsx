@@ -66,7 +66,7 @@ export default function ReflectionDetail() {
             ))}
           </div>
 
-          <p className="font-sans text-[0.7rem] tracking-[0.05em] uppercase text-gold-deep mt-16">— ABAA</p>
+          <p className="font-sans text-[0.7rem] tracking-[0.05em] uppercase text-gold-deep mt-16">- ABAA</p>
         </div>
       </article>
 

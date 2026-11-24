@@ -34,7 +34,7 @@ export default function EntrepreneurByDNA() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"EntrepreneurByDNA · ABAA"} description={"The EntrepreneurByDNA movement — a global community for purpose-driven founders."} canonical="/entrepreneurbydna" />
+      <Seo title={"EntrepreneurByDNA · ABAA"} description={"The EntrepreneurByDNA movement - a global community for purpose-driven founders."} canonical="/entrepreneurbydna" />
       <main className="pt-24">
         {/* Hero */}
         <div className="relative overflow-hidden bg-charcoal min-h-[70vh] flex items-center">

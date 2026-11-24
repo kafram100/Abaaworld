@@ -100,7 +100,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"Contact · ABAA"} description={"Begin the conversation — speaking, partnerships, enterprise collaboration, and publishing inquiries."} canonical="/contact" />
+      <Seo title={"Contact · ABAA"} description={"Begin the conversation - speaking, partnerships, enterprise collaboration, and publishing inquiries."} canonical="/contact" />
 
       <section className="pt-40 pb-24 bg-navy text-ivory">
         <div className="container mx-auto px-6 max-w-4xl">
@@ -214,7 +214,7 @@ export default function Contact() {
           <p className="font-serif text-2xl md:text-3xl italic text-ivory/90 leading-snug">
             "Building systems that move industries, communities, and human potential forward."
           </p>
-          <p className="section-label text-gold mt-6">— ABAA</p>
+          <p className="section-label text-gold mt-6">- ABAA</p>
         </div>
       </section>
 

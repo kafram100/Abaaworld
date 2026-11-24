@@ -25,7 +25,7 @@ const impactAreas = [
 ];
 
 const timeline = [
-  { era: "1997 — 2000", t: "Teenage Operations Leadership", b: "Coordinating workforce, procurement, and execution in Lagos." },
+  { era: "1997 - 2000", t: "Teenage Operations Leadership", b: "Coordinating workforce, procurement, and execution in Lagos." },
   { era: "Service & Operations", t: "Concierge & Stakeholder Systems", b: "Customer experience, coordination, and operational discipline." },
   { era: "Healthcare", t: "Frontline Care & Patient Systems", b: "Clinical practice grounded in compassion and precision." },
   { era: "Clinical Research", t: "Research & Compliance", b: "Risk, ethics, and structured execution at scale." },

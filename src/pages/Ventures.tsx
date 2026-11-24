@@ -28,7 +28,7 @@ export default function Ventures() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"Ventures · ABAA"} description={"ABAA's ventures — building systems that strengthen industries, unlock opportunity, and improve lives."} canonical="/ventures" />
+      <Seo title={"Ventures · ABAA"} description={"ABAA's ventures - building systems that strengthen industries, unlock opportunity, and improve lives."} canonical="/ventures" />
 
       <section className="pt-40 pb-24 bg-navy text-ivory">
         <div className="container mx-auto px-6 max-w-4xl">

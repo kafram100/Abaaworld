@@ -43,7 +43,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-ivory">
       <Navigation />
-      <Seo title={"About · ABAA"} description={"About Arafat Bukola Adam Abdullahi Al Ilory — founder, systems architect, author, and faith-inspired global voice."} canonical="/about" />
+      <Seo title={"About · ABAA"} description={"About Arafat Bukola Adam Abdullahi Al Ilory - founder, systems architect, author, and faith-inspired global voice."} canonical="/about" />
 
       {/* Hero */}
       <section className="pt-40 pb-24 bg-navy text-ivory">
