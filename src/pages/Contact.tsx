@@ -14,7 +14,8 @@ const inquiryTypes = [
   "General Inquiry",
 ];
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL;
+const hasRemoteApi = typeof API_URL === "string" && API_URL.trim() !== "" && !API_URL.includes("localhost");
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", type: "Speaking", organization: "", message: "" });
@@ -50,31 +51,50 @@ export default function Contact() {
     setLoading(true);
     const mailtoUrl = getWebmailUrl();
 
+    // Persist inquiry locally so no message is lost
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          organization: form.organization.trim(),
-          inquiry_type: form.type,
-          message,
-        }),
+      const existing = JSON.parse(localStorage.getItem("abaa_contact_inquiries") || "[]");
+      existing.push({
+        name,
+        email,
+        organization: form.organization.trim(),
+        inquiry_type: form.type,
+        message,
+        date: new Date().toISOString(),
       });
-
-      if (!response.ok) {
-        throw new Error("Server unavailable");
-      }
-
-      setSubmitted(true);
+      localStorage.setItem("abaa_contact_inquiries", JSON.stringify(existing));
     } catch {
-      // Backend not running or client-side hosting: seamlessly route straight to webmail
-      window.location.href = mailtoUrl;
-      setSubmitted(true);
-    } finally {
-      setLoading(false);
+      // Ignore storage errors
     }
+
+    if (hasRemoteApi) {
+      try {
+        const response = await fetch(`${API_URL}/api/contact`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            organization: form.organization.trim(),
+            inquiry_type: form.type,
+            message,
+          }),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+          setLoading(false);
+          return;
+        }
+      } catch {
+        // Fall back to webmail dispatch below
+      }
+    }
+
+    // Direct webmail dispatch to Arafat@abaaworld.com & forward to harafat750@gmail.com
+    window.location.href = mailtoUrl;
+    setSubmitted(true);
+    setLoading(false);
   };
 
   return (

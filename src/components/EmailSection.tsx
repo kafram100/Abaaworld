@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import abaaFloral from "@/assets/abaa-floral.jpeg";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL;
+const hasRemoteApi = typeof API_URL === "string" && API_URL.trim() !== "" && !API_URL.includes("localhost");
 
 export default function EmailSection() {
   const [email, setEmail] = useState("");
@@ -21,25 +22,42 @@ export default function EmailSection() {
     setStatus("loading");
     setErrorMsg("");
 
+    // Persist subscriber locally so no subscription is lost
     try {
-      const res = await fetch(`${API_URL}/api/newsletter`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: trimmed }),
-      });
-
-      if (res.ok) {
-        setStatus("success");
-        setEmail("");
-      } else {
-        throw new Error("API not live");
+      const existing = JSON.parse(localStorage.getItem("abaa_newsletter_subscribers") || "[]");
+      if (!existing.includes(trimmed)) {
+        existing.push(trimmed);
+        localStorage.setItem("abaa_newsletter_subscribers", JSON.stringify(existing));
       }
     } catch {
-      // Seamless webmail fallback without throwing error
-      window.location.href = `mailto:Arafat@abaaworld.com?cc=harafat750@gmail.com&subject=${encodeURIComponent("Newsletter Subscription")}&body=${encodeURIComponent("Please add " + trimmed + " to the ABAA mailing list.")}`;
-      setStatus("success");
-      setEmail("");
+      // Ignore storage errors
     }
+
+    const mailtoUrl = `mailto:Arafat@abaaworld.com?cc=harafat750@gmail.com&subject=${encodeURIComponent("Newsletter / Waitlist Subscription")}&body=${encodeURIComponent("Please add " + trimmed + " to the ABAA waitlist and founder letters mailing list.")}`;
+
+    // Only attempt fetch if a live remote API URL is explicitly configured
+    if (hasRemoteApi) {
+      try {
+        const res = await fetch(`${API_URL}/api/newsletter`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: trimmed }),
+        });
+
+        if (res.ok) {
+          setStatus("success");
+          setEmail("");
+          return;
+        }
+      } catch {
+        // Fall back to webmail dispatch below
+      }
+    }
+
+    // Direct webmail dispatch to Arafat@abaaworld.com & forward to harafat750@gmail.com
+    window.location.href = mailtoUrl;
+    setStatus("success");
+    setEmail("");
   };
 
   return (
